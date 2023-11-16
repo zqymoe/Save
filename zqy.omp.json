@@ -32,7 +32,9 @@
           "foreground": "#000000",
           "background": "#00FFFF",
           "properties": {
-            "style": "full"
+            "style": "full",
+            "home_icon": "home",
+            "folder_separator_icon": "/"
           },
           "style": "plain",
           "template": " <b>{{ .Path }}</b> ",
