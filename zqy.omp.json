@@ -64,7 +64,7 @@
         {
           "background": "#00FF00",
           "background_templates": [
-            "{{ if gt .Code 0 }}#FF0000{{ end }}"
+            "{{ if ne .Code 0 }}#FF0000{{ end }}"
           ],
           "foreground": "#000000",
           "properties": {
