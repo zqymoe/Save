@@ -102,7 +102,7 @@
   "transient_prompt": {
     "background": "transparent",
     "foreground": "#FFFF00",
-    "template": "{{if .Root}}[Admin]{{end}}🤣👉 "
+    "template": "{{if .Root}}<b>[Admin]</b>{{end}}🤣👉 "
   },
   "version": 2
 }
