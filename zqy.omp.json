@@ -15,7 +15,7 @@
           "background": "#FFFFFF",
           "foreground": "#000000",
           "properties": {
-            "time_format": "01/02 03:04"
+            "time_format": "01/02 15:04"
           },
           "style": "plain",
           "template": " <b>{{ .CurrentDate | date .Format }}</b> ",
