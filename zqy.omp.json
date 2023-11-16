@@ -1,0 +1,106 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "background": "#ff4488",
+          "foreground": "#000000",
+          "style": "plain",
+          "template": " <b>{{ .Shell }}</b> ",
+          "type": "shell"
+        },
+        {
+          "background": "#FFFFFF",
+          "foreground": "#000000",
+          "properties": {
+            "time_format": "01/02 03:04"
+          },
+          "style": "plain",
+          "template": " <b>{{ .CurrentDate | date .Format }}</b> ",
+          "type": "time"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#000000",
+          "background": "#00FFFF",
+          "properties": {
+            "style": "full"
+          },
+          "style": "plain",
+          "template": " <b>{{ .Path }}</b> ",
+          "type": "path"
+        },
+        {
+          "background": "#FFFF00",
+          "foreground": "#000000",
+          "properties": {
+            "display_mode": "context",
+            "fetch_virtual_env": true
+          },
+          "style": "plain",
+          "template": " <b>Py:{{ .Venv }}</b> ",
+          "type": "python"
+        },
+        {
+          "foreground": "#000000",
+          "background": "#FF8800",
+          "properties": {
+            "branch_icon": ""
+          },
+          "style": "plain",
+          "template": " <b>Git:{{ .HEAD }}</b> ",
+          "type": "git"
+        },
+        {
+          "background": "#00FF00",
+          "background_templates": [
+            "{{ if gt .Code 0 }}#FF0000{{ end }}"
+          ],
+          "foreground": "#000000",
+          "properties": {
+            "always_enabled": true
+          },
+          "style": "plain",
+          "template": " <b>{{ .Code }}</b> ",
+          "type": "status"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#FFFF00",
+          "style": "plain",
+          "template": "<b>[Admin]</b>",
+          "type": "root"
+        },
+        {
+          "foreground": "#FFFF00",
+          "style": "plain",
+          "template": "🤣👉 ",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "console_title_template": "{{ .Shell }} in {{ .Path }}",
+  "final_space": false,
+  "transient_prompt": {
+    "background": "transparent",
+    "foreground": "#FFFF00",
+    "template": "{{if .Root}}[Admin]{{end}}🤣👉 "
+  },
+  "version": 2
+}
